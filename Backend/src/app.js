@@ -77,7 +77,7 @@ app.patch("/api/notes/:id", async (req, res) => {
 
 // Serving static files
 app.use("*name", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "/public/index.html"));
 });
 
 module.exports = app;
