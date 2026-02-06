@@ -2,11 +2,14 @@
 const express = require("express");
 const noteModel = require("./models/note.model");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
-app.use(cors());
+// Middlewares
+app.use(cors()); // Using middleware so we can use our own APIs created in Backend
 app.use(express.json()); // Using middleware
+app.use(express.static("./public")); // http://localhost:3000/assets/index-B2ds9ijj.js & http://localhost:3000/index-DH3yncXf.css
 
 // POST /api/notes
 // create new note and save data in mongo db
@@ -70,6 +73,11 @@ app.patch("/api/notes/:id", async (req, res) => {
   res.status(200).json({
     message: "Note updated successfully",
   });
+});
+
+// Serving static files
+app.use("*name", (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "..", "/public/index.html"));
 });
 
 module.exports = app;

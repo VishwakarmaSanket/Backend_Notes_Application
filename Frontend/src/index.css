@@ -17,6 +17,43 @@ html {
   color: white;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+
+  padding-block: 2rem;
+  padding-inline: 2rem
+}
+
+.note-create-form {
+  display: flex;
+  gap: 1rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+
+.note-create-form input {
+  padding: 1.2rem 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.note-create-form button {
+  padding: 1.2rem 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: rgb(56, 210, 156);
+  font-weight: 600;
+  color: white;
+}
+
 .notes {
   display: flex;
   gap: 1rem;
@@ -27,8 +64,51 @@ html {
 
 .note {
   background-color: #333;
-  padding-block: 1rem;
-  padding-inline: 2rem;
+  padding: 2rem;
   border-radius: 0.7rem;
   max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.note h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.note p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.note .btn {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.note button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 0.4rem;
+}
+
+.delete {
+  background-color: rgb(199, 6, 6);
+  color: white;
+}
+
+.update {
+  background-color: rgb(24, 172, 217);
+  color: white;
 }
